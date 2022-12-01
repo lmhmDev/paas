@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+a{
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fbfbfb;
+    transition: transform .1s;
+}
+
+a:hover{
+    transform: scale(1.05);
+}
+
+.dog-link{
+    background-color: rgb(31, 31, 31);
+    
+}
+
+.cat-link{
+    background-color: rgb(109, 109, 109);
+}

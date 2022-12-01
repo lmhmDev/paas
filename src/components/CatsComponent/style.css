@@ -1,0 +1,35 @@
+.cat-card{
+    border:1px solid #fbfbfb;
+    background-color: #fbfbfb;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.cat-card button{
+    border: none;
+    background-color: rgb(109, 109, 109);
+    color: #fbfbfb;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color .1s;
+}
+
+.cat-card button:hover{
+    background-color: rgb(92, 91, 91)
+}
