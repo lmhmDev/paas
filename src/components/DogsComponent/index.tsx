@@ -19,7 +19,6 @@ const DogsComponent = () => {
 
     useEffect(() => {
         changeTheme(2)
-        console.log('s')
     },[])
 
     return(
