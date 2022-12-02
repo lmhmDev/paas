@@ -5,6 +5,20 @@
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
+  color: #fbfbfb;
+  transition: background-color .2s;
+}
+
+.main-bg{
+  background-color: #70CDD5;
+}
+
+.cat-bg{
+  background-color: rgb(109, 109, 109);
+}
+
+.dog-bg{
+  background-color: #d6b96a;
 }
 
 .title-container{

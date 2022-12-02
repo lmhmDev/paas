@@ -1,8 +1,16 @@
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 50px;
 
+}
+
+.container > div{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 a{
@@ -25,4 +33,10 @@ a:hover{
 
 .cat-link{
     background-color: rgb(109, 109, 109);
+}
+
+.fav-link{
+    background-color: rgb(243, 243, 124);
+    width: fit-content;
+    color: black;
 }

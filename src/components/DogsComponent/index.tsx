@@ -1,11 +1,14 @@
-import {useState} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import Loader from '../Loader'
 import './style.css'
+import Context from '../../utils/Context'
 
 const DogsComponent = () => {
     
     const [loading,setLoading] = useState(false)
     const [url,setUrl] = useState('')
+
+    const {changeTheme} = useContext(Context)
 
     const getDog = async () => {
         setLoading(true)
@@ -13,6 +16,10 @@ const DogsComponent = () => {
         setLoading(false)
         setUrl(response.message)
     }
+
+    useEffect(() => {
+        changeTheme(2)
+    },[])
 
     return(
         <div className="dog-card">
