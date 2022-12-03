@@ -18,7 +18,7 @@ const MainMenuComponent = () => {
                 <Link to="dogs" className="dog-link">Dogs Person</Link>
                 <Link to="cats" className="cat-link">Cats Person</Link>
             </div>
-            <Link to="" className="fav-link">Favorites</Link>
+            <Link to="favorites" className="fav-link">Favorites</Link>
         </div>
     )
 }

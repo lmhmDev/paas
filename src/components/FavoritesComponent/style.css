@@ -1,0 +1,9 @@
+.fav-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.fav-container img{
+    width: 19%;
+}

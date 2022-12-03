@@ -1,4 +1,5 @@
 .main{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +7,26 @@
   width: 100vw;
   min-height: 100vh;
   color: #fbfbfb;
+  
+}
+
+.bg-color{
+  position: fixed;
+  width: 100%;
+  height: 100%;
   transition: background-color .2s;
+}
+
+.paws-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/img/pawprint.png');
+  background-repeat: repeat;
+  background-size: 30px;
+  opacity: .1;
+  animation: pawsbg 30s infinite linear;
+  
 }
 
 .main-bg{
@@ -23,6 +43,7 @@
 
 .title-container{
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 .sub-top{
@@ -92,5 +113,14 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pawsbg {
+  from{
+    background-position-y:0%;
+  }
+  to{
+    background-position-y: 96%;
   }
 }

@@ -2,6 +2,7 @@ import {useState,useContext, useEffect} from 'react'
 import Loader from '../Loader'
 import './style.css'
 import Context from '../../utils/Context'
+import { storeImage } from '../../utils/storage'
 
 const CatsComponent = () => {
     
@@ -29,6 +30,7 @@ const CatsComponent = () => {
             }
             
             <button onClick={getCat}>Get Cat</button>
+            { url && <button onClick={()=> storeImage(url)}>Add to favorites</button>}
         </div>
     )
 }

@@ -2,6 +2,7 @@ import {useState, useEffect, useContext} from 'react'
 import Loader from '../Loader'
 import './style.css'
 import Context from '../../utils/Context'
+import { storeImage } from '../../utils/storage'
 
 const DogsComponent = () => {
     
@@ -30,6 +31,7 @@ const DogsComponent = () => {
             }
             
             <button onClick={getDog}>Get Dog</button>
+            { url && <button onClick={()=> storeImage(url)}>Add to favorites</button>}
         </div>
     )
 }
