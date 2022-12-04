@@ -19,3 +19,13 @@ export const getImages = async() => {
     }
     return false
 }
+
+export const deleteImage = async(url) => {
+    const storage = await window.localStorage.getItem('urls')
+    const urls = await JSON.parse(storage)
+    if(urls.includes(url)){
+        var index = urls.indexOf(url);
+        urls.splice(index, 1);
+        window.localStorage.setItem('urls',JSON.stringify(urls))
+    }
+}

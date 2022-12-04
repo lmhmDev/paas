@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
-import { getImages } from "../../utils/storage"
+import { getImages,deleteImage } from "../../utils/storage"
 import './style.css'
+import FavCard from '../FavCard'
 
 const FavoritesComponent = () => {
 
@@ -11,6 +12,13 @@ const FavoritesComponent = () => {
         setUrls(storage)
     }
 
+    const deleteFav = async (url) => {
+        setUrls(urls.filter((current) => {
+            return current !== url
+        }));
+        deleteImage(url)
+    }
+
     useEffect(() => {
         setImages()
     },[])
@@ -19,7 +27,7 @@ const FavoritesComponent = () => {
         <div className='fav-container'>
             {
                 urls.map((url) => {
-                    return <img src={url} />
+                    return <FavCard url={url} deleteImage={() => deleteFav(url)} />
                 })
             }
         </div>
