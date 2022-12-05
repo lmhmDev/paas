@@ -5,7 +5,7 @@ const FavCard = ({url, deleteImage}) => {
     return(
         <div className="fav-card">
             <img src={url} alt="" />
-            <div>
+            <div className='fav-buttons-container'>
                 <button onClick={deleteImage}>Remove Favorite</button>
             </div>
         </div>

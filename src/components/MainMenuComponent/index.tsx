@@ -4,7 +4,7 @@ import './style.css'
 import Context from "../../utils/Context"
 
 
-const MainMenuComponent = () => {
+const MainMenuComponent = ({showFav}) => {
 
     const {changeTheme} = useContext(Context)
 
@@ -15,10 +15,13 @@ const MainMenuComponent = () => {
     return(
         <div className="container">
             <div>
-                <Link to="dogs" className="dog-link">Dogs Person</Link>
-                <Link to="cats" className="cat-link">Cats Person</Link>
+                <Link to="/dogs" className="dog-link">Dogs Person</Link>
+                <Link to="/cats" className="cat-link">Cats Person</Link>
             </div>
-            <Link to="favorites" className="fav-link">Favorites</Link>
+            {
+                showFav &&
+                <Link to="/favorites" className="fav-link">Favorites</Link>
+            }
         </div>
     )
 }

@@ -2,6 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     gap: 10px;
+    padding: 1%;
+}
+
+.fav-container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #fbfbfb;
+    color: black;
+    padding: 15px;
+    border-radius: 12px;
 }

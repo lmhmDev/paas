@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import { getImages,deleteImage } from "../../utils/storage"
 import './style.css'
 import FavCard from '../FavCard'
+import MainMenuComponent from '../MainMenuComponent'
 
 const FavoritesComponent = () => {
 
@@ -26,9 +27,14 @@ const FavoritesComponent = () => {
     return(
         <div className='fav-container'>
             {
+                urls.length ?
                 urls.map((url) => {
                     return <FavCard url={url} deleteImage={() => deleteFav(url)} />
-                })
+                }) :
+                <div>
+                    <p>Parece que no tienes ningun favorito, añade alguno!</p>
+                    <MainMenuComponent showFav={false}/>
+                </div>
             }
         </div>
     )

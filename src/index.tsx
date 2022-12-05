@@ -19,7 +19,7 @@ root.render(
       <App>
         <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MainMenuComponent/>}/>
+          <Route path='/' element={<MainMenuComponent showFav={true}/>}/>
           <Route path='/cats' element={<CatsComponent/>}/>
           <Route path='/dogs' element={<DogsComponent/> }/>
           <Route path='/favorites' element={<FavoritesComponent/> }/>
