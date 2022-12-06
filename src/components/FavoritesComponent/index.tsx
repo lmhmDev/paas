@@ -31,7 +31,7 @@ const FavoritesComponent = () => {
                 urls.map((url) => {
                     return <FavCard url={url} deleteImage={() => deleteFav(url)} />
                 }) :
-                <div>
+                <div className="empty">
                     <p>Parece que no tienes ningun favorito, añade alguno!</p>
                     <MainMenuComponent showFav={false}/>
                 </div>

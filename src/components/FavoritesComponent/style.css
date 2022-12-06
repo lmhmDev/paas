@@ -7,7 +7,7 @@
     padding: 1%;
 }
 
-.fav-container > div{
+.fav-container > .empty{
     display: flex;
     flex-direction: column;
     gap: 50px;

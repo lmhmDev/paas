@@ -31,7 +31,7 @@ function App({children}) {
     <Context.Provider value={{theme,changeTheme}}>
       <div className={'bg-color '+themes[theme].backgroundClass}></div>
       <div className='paws-bg'></div>
-      <div className={'main '}>
+      <div className='main'>
         <div className='title-container'>
           <p className="sub-top">Welcome to:</p>
           <p className="title">Pets As A Service</p>
