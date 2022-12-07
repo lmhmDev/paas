@@ -27,10 +27,13 @@ function App({children}) {
     setTheme(newTheme);
   }
 
+  // cheats
+
   return (
     <Context.Provider value={{theme,changeTheme}}>
       <div className={'bg-color '+themes[theme].backgroundClass}></div>
       <div className='paws-bg'></div>
+      <div></div>
       <div className='main'>
         <div className='title-container'>
           <p className="sub-top">Welcome to:</p>
