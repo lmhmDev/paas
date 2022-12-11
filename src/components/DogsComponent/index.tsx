@@ -3,6 +3,7 @@ import Loader from '../Loader'
 import './style.css'
 import Context from '../../utils/Context'
 import { storeImage } from '../../utils/storage'
+import { Link } from 'react-router-dom'
 
 const DogsComponent = () => {
     
@@ -32,6 +33,7 @@ const DogsComponent = () => {
             
             <button onClick={getDog}>Get Dog</button>
             { url && <button onClick={()=> storeImage(url)}>Add to favorites</button>}
+            <Link to="/">Back</Link>
         </div>
     )
 }

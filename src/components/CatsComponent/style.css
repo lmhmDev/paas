@@ -30,6 +30,24 @@
     transition: background-color .1s;
 }
 
+.cat-card a {
+    border: none;
+    background-color: rgb(109, 109, 109);
+    color: #fbfbfb;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color .1s;
+    text-decoration: none;
+    text-align: center;
+}
+
 .cat-card button:hover{
+    background-color: rgb(92, 91, 91)
+}
+
+.cat-card a:hover{
     background-color: rgb(92, 91, 91)
 }
