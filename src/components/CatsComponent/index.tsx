@@ -20,6 +20,7 @@ const CatsComponent = () => {
 
     const addToFavorites = () =>{
         setFavImages((current) => {
+            if(!current.length) return [url]
             return [...current, url]
         })
         storeImage(url)
@@ -47,7 +48,7 @@ const CatsComponent = () => {
             <button onClick={getCat}>Get Cat</button>
             { url &&
                 <>
-                    {favImages.includes(url) ?
+                    {(favImages.length && favImages.includes(url)) ?
                     <button onClick={()=> deleteFromFavorites()}>Remove favorite</button> :
                     <button onClick={()=> addToFavorites()}>Add to favorites</button>}
                 </>   
