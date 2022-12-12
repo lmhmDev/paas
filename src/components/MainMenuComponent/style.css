@@ -38,5 +38,5 @@
 .fav-link{
     background-color: rgb(243, 243, 124);
     width: fit-content;
-    color: black;
+    color: black !important;
 }

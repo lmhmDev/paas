@@ -1,34 +1,29 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { getImages,deleteImage } from "../../utils/storage"
 import './style.css'
 import FavCard from '../FavCard'
+import Context from '../../utils/Context';
 import MainMenuComponent from '../MainMenuComponent'
 
 const FavoritesComponent = () => {
 
-    const [urls,setUrls] = useState([])
-
-    const setImages = async () => {
-        const storage = await getImages()
-        setUrls(storage)
-    }
+    const {favImages,setFavImages} = useContext(Context)
 
     const deleteFav = async (url) => {
-        setUrls(urls.filter((current) => {
+        setFavImages(favImages.filter((current) => {
             return current !== url
         }));
         deleteImage(url)
     }
 
     useEffect(() => {
-        setImages()
     },[])
 
     return(
         <div className='fav-container'>
             {
-                urls.length ?
-                urls.map((url) => {
+                favImages.length ?
+                favImages.map((url) => {
                     return <FavCard url={url} deleteImage={() => deleteFav(url)} />
                 }) :
                 <div className="empty">

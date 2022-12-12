@@ -3,11 +3,12 @@ import logo from '../../logo.svg';
 import './App.css';
 import Context from '../../utils/Context';
 import themes from '../../utils/themes'
+import { getImages } from '../../utils/storage';
 
 
 function App({children}) {
 
-  const [loading,setLoading] = useState(false)
+  const [favImages,setFavImages] = useState([])
 
   const defaultTheme = () => {
     switch(window.location.pathname){
@@ -29,8 +30,18 @@ function App({children}) {
 
   // cheats
 
+  const getImagesFromStorage = async() =>{
+    const images = await getImages();
+    setFavImages(images)
+  }
+
+  useEffect(() => {
+    getImagesFromStorage()
+
+  },[])
+
   return (
-    <Context.Provider value={{theme,changeTheme}}>
+    <Context.Provider value={{theme,changeTheme,favImages,setFavImages}}>
       <div className={'bg-color '+themes[theme].backgroundClass}></div>
       <div className='paws-bg'></div>
       <div></div>
