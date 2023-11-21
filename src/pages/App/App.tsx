@@ -4,6 +4,7 @@ import './App.css';
 import Context from '../../utils/Context';
 import themes from '../../utils/themes'
 import { getImages } from '../../utils/storage';
+import Navbar from '../../components/Navbar';
 
 
 function App({children}) {
@@ -47,9 +48,10 @@ function App({children}) {
       <div></div>
       <div className='main'>
         <div className='title-container'>
-          <p className="sub-top">Welcome to:</p>
-          <p className="title">Pets As A Service</p>
-          <p className="sub-bottom">(PAAS)</p>
+			<p className="sub-top">Welcome to:</p>
+			<p className="title">Pets As A Service</p>
+			<p className="sub-bottom">(PAAS)</p>
+			<Navbar />
         </div>
           {children}
       </div>

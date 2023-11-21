@@ -1,5 +1,5 @@
-import {useState, useEffect, useContext} from 'react'
-import { getImages,deleteImage } from "../../utils/storage"
+import { useEffect, useContext} from 'react'
+import { deleteImage } from "../../utils/storage"
 import './style.css'
 import FavCard from '../FavCard'
 import Context from '../../utils/Context';

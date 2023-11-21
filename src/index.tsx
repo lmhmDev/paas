@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './pages/App/App';
@@ -8,6 +8,7 @@ import DogsComponent from './components/DogsComponent';
 import FavoritesComponent from './components/FavoritesComponent';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
 
 
 const root = ReactDOM.createRoot(
